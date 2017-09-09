@@ -6,12 +6,12 @@ module.exports = function (config) {
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
     reporters: ['spec'],
     files: [
-      {pattern: 'test/*.test.js', watched: false},
-      {pattern: 'test/**/*.test.js', watched: false}
+      {pattern: 'test/unit/*.test.js', watched: false},
+      {pattern: 'test/unit/**/*.test.js', watched: false}
     ],
     preprocessors: {
-      'test/*.test.js': ['webpack', 'sourcemap'],
-      'test/**/*.test.js': ['webpack', 'sourcemap']
+      'test/unit/*.test.js': ['webpack', 'sourcemap'],
+      'test/unit/**/*.test.js': ['webpack', 'sourcemap']
     },
     webpack: webpackConfig,
     webpackMiddleware: {
