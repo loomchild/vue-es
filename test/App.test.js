@@ -11,7 +11,7 @@ describe('App.vue', () => {
   it('should have "Send event" button', () => {
     const Constructor = Vue.extend(App)
     const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('#send button').textContent).to.be.equal('Send eventa')
+    expect(vm.$el.querySelector('#send button').textContent).to.be.equal('Send event')
   })
 
   it('should have "Search events" button', () => {
