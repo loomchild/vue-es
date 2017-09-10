@@ -2,15 +2,30 @@
 
 > A Vue and ElasticSearch demo
 
-## Build Setup
+# Requirements
 
-``` bash
-# install dependencies
-npm install
+* Node 6.x
+* Docker with Docker Compose
 
-# serve with hot reload at localhost:8080
-npm run dev
+# Build
 
-# build for production in dist/ directory
-npm run build
-```
+Download node dependencies:
+
+    npm install
+
+# Running
+
+Start external services:
+
+    docker-compose up -d
+
+Start the server:
+
+    npm run dev
+
+# Production
+
+In order to run in production ElasticSearch is required. 
+Static application can be generated into dist/ directory using:
+
+    npm run build
