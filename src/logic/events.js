@@ -1,5 +1,3 @@
-const INDEX = 'events'
-
 class Events {
   constructor (es) {
     this.es = es
