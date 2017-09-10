@@ -13,7 +13,6 @@
     "test-e2e": "nightwatch --env chrome"
   },
   "dependencies": {
-    "elasticsearch": "^13.3.1",
     "vue": "^2.3.3"
   },
   "devDependencies": {
@@ -27,6 +26,7 @@
     "chromedriver": "^2.27.2",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.25.0",
+    "elasticsearch": "^13.3.1",
     "eslint": "^4.6.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-chai-friendly": "^0.4.0",

@@ -7,7 +7,13 @@ const client = new elasticsearch.Client({
 })
 
 client.indices.exists({index: INDEX})
-  .then(exists => exists ? client.indices.delete({index: INDEX}) : false)
+  .then(exists => {
+    if (exists) {
+      console.log('Deleting existing index')
+      return client.indices.delete({index: INDEX})
+    }
+    return false
+  })
   .then(() => client.indices.create({
     index: INDEX,
     body: {
