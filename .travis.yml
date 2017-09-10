@@ -3,5 +3,9 @@ language: node_js
 node_js:
     - "6"
 
-before_script:
-    - npm run lint
+script:
+  - npm run lint
+  - npm run test
+  - npm run dev
+  - npm run test-e2e
+  - pkill node
