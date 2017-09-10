@@ -11,5 +11,5 @@ script:
   - npm run test
   - npm run dev &
   - sleep 2
-  - npm run test-e2e
+  - xvfb-run npm run test-e2e
   - pkill node
