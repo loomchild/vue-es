@@ -80,3 +80,4 @@ tags
 
 # Custom
 .tern-port
+tests_output/
