@@ -7,11 +7,13 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --hide-modules",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
+    "init": "node scripts/createIndex.js",
     "lint": "eslint --ext .js,.vue src test",
     "test": "karma start --single-run",
     "test-e2e": "nightwatch --env chrome"
   },
   "dependencies": {
+    "elasticsearch": "^13.3.1",
     "vue": "^2.3.3"
   },
   "devDependencies": {
