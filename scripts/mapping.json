@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "timestamp": {
+      "type": "date"
+    },
+    "useragent": {
+      "type": "text"
+    }
+  }
+}
