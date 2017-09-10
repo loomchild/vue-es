@@ -6,10 +6,15 @@ node_js:
 env:
   DBUS_SESSION_BUS_ADDRESS=/dev/null
 
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
+
 script:
   - npm run lint
   - npm run test
   - npm run dev &
   - sleep 2
-  - xvfb-run npm run test-e2e
+  - npm run test-e2e
   - pkill node
