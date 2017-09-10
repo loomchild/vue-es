@@ -1,5 +1,5 @@
-* Unit test vue
-* E2E test vue
 * ES
-* Dockerize
-* Document
+* ES mapping
+* Integration
+* Document (reqs, commands)
+* E2E mocha
