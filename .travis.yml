@@ -3,6 +3,9 @@ language: node_js
 node_js:
     - "6"
 
+env:
+  DBUS_SESSION_BUS_ADDRESS=/dev/null
+
 script:
   - npm run lint
   - npm run test
