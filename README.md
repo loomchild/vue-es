@@ -17,7 +17,7 @@ Download node dependencies:
 
 Start external services:
 
-    docker-compose up -d
+    npm run deps
 
 Start the server:
 
