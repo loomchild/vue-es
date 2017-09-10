@@ -13,6 +13,7 @@
     "test-e2e": "nightwatch --env chrome"
   },
   "dependencies": {
+    "elasticsearch-browser": "^13.3.1",
     "vue": "^2.3.3"
   },
   "devDependencies": {

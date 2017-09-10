@@ -18,24 +18,29 @@
 </template>
 
 <script>
-import * as events from './logic/events'
+import {getEs} from './data/es'
+import Events from './logic/events'
 
 export default {
 
   name: 'app',
 
-  data: {
-    criteria: ''
+  beforeCreate () {
+    this.events = new Events(getEs())
   },
+
+  data: () => ({
+    criteria: ''
+  }),
 
   methods: {
 
     send () {
-      events.create()
+      this.events.create()
     },
 
     search () {
-      events.search(this.criteria)
+      this.events.search(this.criteria)
     }
 
   }

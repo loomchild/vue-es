@@ -1,9 +1,17 @@
-const create = () => {
-  console.log('AAA')
+const INDEX = 'events'
+
+class Events {
+  constructor (es) {
+    this.es = es
+  }
+
+  create () {
+    console.log('AAA')
+  }
+
+  search (criteria) {
+    console.log('BBB ' + criteria)
+  }
 }
 
-const search = (criteria) => {
-  console.log('BBB ' + criteria)
-}
-
-export {create, search}
+export default Events
