@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import * as events from './logic/events'
+
 export default {
 
   name: 'app',
@@ -29,11 +31,11 @@ export default {
   methods: {
 
     send () {
-      console.log('AAA')
+      events.create()
     },
 
     search () {
-      console.log('BBB')
+      events.search(this.criteria)
     }
 
   }
