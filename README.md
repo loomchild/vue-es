@@ -1,5 +1,8 @@
 # vue-es
 
+[![Build Status](https://api.travis-ci.org/loomchild/vue-es.svg)](https://api.travis-ci.org/loomchild/vue-es)
+
+
 > A Vue and ElasticSearch demo
 
 # Requirements
