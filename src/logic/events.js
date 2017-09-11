@@ -6,7 +6,7 @@ class Events {
   }
 
   create () {
-    this.es.create({
+    this.es.index({
       index: INDEX,
       type: 'default',
       body: {

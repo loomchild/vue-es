@@ -7,7 +7,7 @@ describe('logic/Events', () => {
 
   beforeEach(() => {
     es = {
-      create: spy(() => {})
+      index: spy(() => {})
     }
 
     events = new Events(es)
@@ -18,9 +18,9 @@ describe('logic/Events', () => {
 
     events.create()
 
-    expect(es.create).to.have.callCount(1)
-    expect(es.create.getCall(0).args[0].body.useragent).to.containIgnoreCase('phantom')
-    expect(es.create.getCall(0).args[0].body.timestamp).withinDate(new Date(date.valueOf() - 1000), new Date(date.valueOf() + 1000))
+    expect(es.index).to.have.callCount(1)
+    expect(es.index.getCall(0).args[0].body.useragent).to.containIgnoreCase('phantom')
+    expect(es.index.getCall(0).args[0].body.timestamp).withinDate(new Date(date.valueOf() - 1000), new Date(date.valueOf() + 1000))
   })
 
   it('should search events', () => {
