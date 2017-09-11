@@ -14,8 +14,8 @@ env:
 script:
   - npm run lint
   - npm run deps
-  - npm run test
   - npm run dev &
-  - sleep 2
+  - sleep 10
+  - npm run test
   - xvfb-run npm run test-e2e
   - pkill node
