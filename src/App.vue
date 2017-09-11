@@ -11,6 +11,20 @@
     <div id="search">
       <input v-model="criteria" placeholder="Enter your search criteria...">
       <button v-on:click="search">Search events</button>
+      <table>
+        <thead>
+          <tr>
+            <th class="timestamp">Timestamp</th>
+            <th class="useragent">User Agent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="result in results">
+            <td>{{result.timestamp}}</td>
+            <td>{{result.useragent}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
   </div>
@@ -27,10 +41,13 @@ export default {
 
   beforeCreate () {
     this.events = new Events(getEs())
+    this.criteria = ''
+    this.results = []
   },
 
   data: () => ({
-    criteria: ''
+    criteria: this.criteria,
+    results: this.results
   }),
 
   methods: {
@@ -41,6 +58,9 @@ export default {
 
     search () {
       this.events.search(this.criteria)
+        .then(result => {
+          this.results = result.hits.hits.map(hit => hit._source)
+        })
     }
 
   }
@@ -66,5 +86,18 @@ export default {
 
   #search input {
     margin-right: 10px;
+  }
+
+  #search table {
+    margin-top: 20px;
+    width: 80%;
+    text-align: left;
+    border-spacing: 10px;
+    font-family: mono;
+    font-size: 14px;
+  }
+
+  #search table .timestamp {
+    width: 10%;
   }
 </style>

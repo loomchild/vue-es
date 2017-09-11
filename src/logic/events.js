@@ -17,7 +17,15 @@ class Events {
   }
 
   search (criteria) {
-    console.log('BBB ' + criteria)
+    let options = {
+      index: INDEX,
+      sort: 'timestamp:desc'
+    }
+    if (criteria) {
+      options.q = `useragent:${criteria}`
+    }
+
+    return this.es.search(options)
   }
 }
 

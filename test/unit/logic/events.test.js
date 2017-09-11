@@ -1,5 +1,6 @@
-import Events from '../../../src/logic/events'
 import {spy} from 'sinon'
+
+import Events from '../../../src/logic/events'
 
 describe('logic/Events', () => {
   let es
@@ -7,7 +8,8 @@ describe('logic/Events', () => {
 
   beforeEach(() => {
     es = {
-      index: spy(() => {})
+      index: spy(() => {}),
+      search: spy(criteria => Promise.resolve())
     }
 
     events = new Events(es)
@@ -24,5 +26,11 @@ describe('logic/Events', () => {
   })
 
   it('should search events', () => {
+    const criteria = 'test'
+
+    events.search(criteria)
+
+    expect(es.search).to.have.callCount(1)
+    expect(es.search.getCall(0).args[0].q).to.be.equal('useragent:test')
   })
 })
