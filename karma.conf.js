@@ -3,7 +3,7 @@ const webpackConfig = require('./webpack.config')
 module.exports = function (config) {
   config.set({
     browsers: ['PhantomJS'],
-    frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
+    frameworks: ['mocha', 'chai-string', 'chai-datetime', 'sinon-chai', 'phantomjs-shim'],
     reporters: ['spec'],
     files: [
       {pattern: 'test/unit/*.test.js', watched: false},
