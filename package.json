@@ -7,7 +7,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --hide-modules",
     "deps": "docker-compose up -d",
-    "dev": "NODE_ENV=development webpack-dev-server --hot",
+    "start": "NODE_ENV=development webpack-dev-server --hot",
     "init": "node scripts/initIndex.js",
     "lint": "eslint --ext .js,.vue src test",
     "test": "karma start --single-run",

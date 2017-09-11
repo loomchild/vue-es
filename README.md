@@ -24,7 +24,7 @@ Start external services:
 
 Start the server:
 
-    npm run dev
+    npm run start
 
 # Production
 
