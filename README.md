@@ -33,6 +33,10 @@ Start the local development server:
 
 # Test
 
+Launch style check:
+
+    npm run lint
+
 Launch unit / integration tests (deps must be running):
 
     npm run test
@@ -40,6 +44,8 @@ Launch unit / integration tests (deps must be running):
 Launch end-to-end tests (deps and local server must be running):
 
     npm run test-e2e
+
+All of the above tests are automatically executed by [Travis](https://api.travis-ci.org/loomchild/vue-es) after every commit.
 
 # Deploy
 
