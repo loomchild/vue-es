@@ -2,13 +2,12 @@
 
 [![Build Status](https://api.travis-ci.org/loomchild/vue-es.svg)](https://api.travis-ci.org/loomchild/vue-es)
 
-
 > A Vue and ElasticSearch demo
 
 # Requirements
 
 * Node 6.x
-* Docker with Docker Compose
+* Docker with Docker Compose or ElasticSearch running locally with [elasticseach.yml](./elasticsearch.yml)
 
 # Build
 
@@ -16,19 +15,34 @@ Download node dependencies:
 
     npm install
 
-# Running
+# Prepare
 
 Start external services:
 
     npm run deps
 
-Start the server:
+Initialize databases (deletes all data!):
+
+    npm run init
+
+# Run
+
+Start the local development server:
 
     npm run start
 
-# Production
+# Test
 
-In order to run in production ElasticSearch is required. 
+Launch unit / integration tests (deps must be running):
+
+    npm run test
+
+Launch end-to-end tests (deps and local server must be running):
+
+    npm run test-e2e
+
+# Deploy
+
 Static application can be generated into dist/ directory using:
 
     npm run build
