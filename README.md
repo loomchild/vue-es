@@ -1,6 +1,6 @@
 # vue-es
 
-[![Build Status](https://api.travis-ci.org/loomchild/vue-es.svg)](https://api.travis-ci.org/loomchild/vue-es)
+[![Build Status](https://api.travis-ci.org/loomchild/vue-es.svg)](https://travis-ci.org/loomchild/vue-es)
 
 > A Vue and ElasticSearch demo
 
@@ -45,7 +45,7 @@ Launch end-to-end tests (deps and local server must be running):
 
     npm run test-e2e
 
-All of the above tests are automatically executed by [Travis](https://api.travis-ci.org/loomchild/vue-es) after every commit.
+All of the above tests are automatically executed by [Travis](https://travis-ci.org/loomchild/vue-es) after every commit.
 
 # Deploy
 
